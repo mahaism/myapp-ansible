@@ -1,15 +1,16 @@
 ---
-- name: ec2 lauching
-  hosts: localhost
-  tasks:
-  - name: launch ec2
-    ec2:
-       instance_type: t2.micro
-       image: ami-0170fc126935d44c3
-       vpc_subnet_id: subnet-62f4902e
-       wait: yes
-       assigned_public_ip: yes
-       key_name: chef_env
-       instance_tags:
-               server: web
-
+   - name: Launch the AWS instance
+     hosts: localhost
+     tasks:
+       - name: Launch ec2 instance
+         ec2:
+           key_name: chef_env
+           region: us-east-2
+           instance_type: t2.micro
+           image: ami-0170fc126935d44c3
+           group: ansible
+           vpc_subnet_id: subnet-62f4902e
+           assign_public_ip: yes
+           count: 1
+           aws_secret_key: ma49ICljsaa4wKPQFwfBFPUg2aD+mVm6cYJwrkm1
+           aws_access_key: AKIAXSAMUJWIMCRX42EC
