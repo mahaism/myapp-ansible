@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
-sts: webservers
-=======
 ---
 - hosts: webservers
->>>>>>> c35220d7fccd130120b50cd587f3f14f5eb3b6db
   become: True
   tasks:
     - name: install packages
