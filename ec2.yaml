@@ -1,0 +1,15 @@
+---
+- name: ec2 lauching
+  hosts: localhost
+  tasks:
+  - name: launch ec2
+    ec2:
+       instance_type: t2.micro
+       image: ami-0170fc126935d44c3
+       vpc_subnet_id: subnet-62f4902e
+       wait: yes
+       assigned_public_ip: yes
+       key_name: chef_env
+       instance_tags:
+               server: web
+
