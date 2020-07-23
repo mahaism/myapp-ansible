@@ -8,9 +8,15 @@
            region: us-east-2
            instance_type: t2.micro
            image: ami-0170fc126935d44c3
+<<<<<<< HEAD
            group: ansible
            vpc_subnet_id: subnet-62f4902e
            assign_public_ip: yes
            count: 1
            aws_secret_key: ma49ICljsaa4wKPQFwfBFPUg2aD+mVm6cYJwrkm1
            aws_access_key: AKIAXSAMUJWIMCRX42EC
+=======
+           vpc_subnet_id: subnet-62f4902e
+           assign_public_ip: yes
+           count: 1
+>>>>>>> c35220d7fccd130120b50cd587f3f14f5eb3b6db
